@@ -53,13 +53,15 @@ public class ArmorDurabilityPlugin extends JavaPlugin implements Listener, Comma
     }
 
     public boolean applyDurability(ItemStack item) {
-        if (item == null || item.getType() == Material.AIR) return false;
-        Integer customDur = customDurability.get(item.getType());
-        if (customDur == null) return false;
-        item.setData(DataComponentTypes.MAX_DAMAGE, customDur);
-        item.setData(DataComponentTypes.DAMAGE, 0);
-        return true;
-    }
+    if (item == null || item.getType() == Material.AIR) return false;
+    Integer customDur = customDurability.get(item.getType());
+    if (customDur == null) return false;
+    // Не трогаем если уже правильное значение
+    Integer currentMax = item.getData(DataComponentTypes.MAX_DAMAGE);
+    if (currentMax != null && currentMax == customDur) return false;
+    item.setData(DataComponentTypes.MAX_DAMAGE, customDur);
+    return true;
+}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
