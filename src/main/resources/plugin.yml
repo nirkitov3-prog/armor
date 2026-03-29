@@ -1,0 +1,17 @@
+name: ArmorDurability
+version: 1.0.0
+main: dev.armordurability.ArmorDurabilityPlugin
+api-version: '1.21'
+description: Custom armor durability loaded from config
+author: custom
+
+commands:
+  armordurability:
+    description: ArmorDurability management
+    usage: /armordurability reload
+    aliases: [ad]
+
+permissions:
+  armordurability.reload:
+    description: Allows reloading the config
+    default: op

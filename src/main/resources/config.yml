@@ -1,0 +1,28 @@
+# Кастомная прочность брони
+# Измени значения и выполни /armordurability reload на сервере
+# Чтобы применить изменения без перезапуска
+
+durability:
+  # Незеритовая броня (ванилла: шлем 407, нагрудник 592, поножи 555, ботинки 481)
+  netherite_helmet: 407
+  netherite_chestplate: 792
+  netherite_leggings: 755
+  netherite_boots: 681
+
+  # Алмазная броня (ванилла: шлем 363, нагрудник 528, поножи 495, ботинки 429)
+  diamond_helmet: 463
+  diamond_chestplate: 628
+  diamond_leggings: 595
+  diamond_boots: 529
+
+  # Железная броня (ванилла: шлем 165, нагрудник 240, поножи 225, ботинки 195)
+  iron_helmet: 225
+  iron_chestplate: 300
+  iron_leggings: 285
+  iron_boots: 255
+
+  # Кольчуга (ванилла: шлем 165, нагрудник 240, поножи 225, ботинки 195)
+  chainmail_helmet: 225
+  chainmail_chestplate: 300
+  chainmail_leggings: 285
+  chainmail_boots: 255
